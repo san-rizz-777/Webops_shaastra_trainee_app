@@ -3,6 +3,10 @@ import logo from "../assets/images/logo.png";
 import { MdAlternateEmail } from "react-icons/md";
 import { useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import { BsApple } from "react-icons/bs";
+import { FaXTwitter } from "react-icons/fa6";
+import { FcGoogle } from "react-icons/fc";
+
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState<bool>(false);
@@ -48,15 +52,35 @@ const Login = () => {
       </div>
     </div>
 
-       
-
-</div>
 <button className="w-full p-2 bg-blue-500 rounded-xl mt-3 hover:bg-blue-600 text-sm md:text-base">
           Login
-        </button>
+</button>
+       
+        <div className="relative w-full flex items-center justify-center py-3">
+          <div className="w-2/5 h-[2px] bg-gray-800"></div>
+          <h3 className="font-lora text-xs md:text-sm px-4 text-gray-500">
+            Or
+          </h3>
+          <div className="w-2/5 h-[2px] bg-gray-800"></div>
+        </div>
 
-    </div>
-  );
+
+ <div className="w-full flex items-center justify-evenly md:justify-between gap-2">
+          <div className="p-2 md:px-6 lg:px-10 bg-slate-700 cursor-pointer rounded-xl hover:bg-slate-800">
+            <BsApple className="text-lg md:text-xl" />
+          </div>
+       <div className="p-2 md:px-6 lg:px-10 bg-slate-700 cursor-pointer rounded-xl hover:bg-slate-800">
+            <FcGoogle className="text-lg md:text-xl" />
+            </div>
+          <div className="p-2 md:px-6 lg:px-10 bg-slate-700 cursor-pointer rounded-xl hover:bg-slate-800">
+            <FaXTwitter className="text-lg md:text-xl" />
+          </div>
+        </div>
+
+
+</div>
+</div>
+  );  
 };
 
 export default Login;
